@@ -687,7 +687,7 @@ nabu.page.views.data.DataCommon = Vue.extend({
 				if (styles) {
 					var self = this;
 					return styles.filter(function(style) {
-						return self.isCondition(style.condition, record, self);
+						return self.$services.page.isCondition(style.condition, {record:record}, self);
 					}).map(function(style) {
 						return style.class;
 					});
