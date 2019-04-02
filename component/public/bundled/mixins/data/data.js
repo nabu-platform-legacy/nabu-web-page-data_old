@@ -107,7 +107,7 @@ nabu.page.views.data.DataCommon = Vue.extend({
 				if (!x.global) {
 					return false;
 				}
-				return !x.condition || self.$services.page.isCondition(x.condition, {records:self.records}, self);
+				return !x.condition || self.$services.page.isCondition(x.condition, {records:self.records, page:self.state}, self);
 			});
 			return globalActions;
 		},
